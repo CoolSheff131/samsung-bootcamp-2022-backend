@@ -16,8 +16,6 @@ public class App {
 
         ConfigurableApplicationContext context = SpringApplication.run(App.class, args);
 
-        List<Entity> entityList = context.getBean(EntityRepository.class).findAll();
-        entityList.stream().forEach(System.out::println);
 //        try {
 //            Console.main(args);
 //        } catch (SQLException e) {
