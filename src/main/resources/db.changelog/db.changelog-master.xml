@@ -4,7 +4,9 @@
                    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd
         http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
-    <include file="db.changelog/1.0/2022-05-17-0001-entity.xml"/>
+    <include file="db.changelog/1.0/2022-05-22-0001-tag.xml"/>
+    <include file="db.changelog/1.0/2022-05-22-0002-review.xml"/>
+    <include file="db.changelog/1.0/2022-05-22-0003-comment.xml"/>
 
-    <include file="db.changelog/data/2022-05-17-0001-entity-data.xml"/>
+    <include file="db.changelog/data/2022-05-22-0001-tag-data.xml"/>
 </databaseChangeLog>
