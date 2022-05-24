@@ -21,7 +21,7 @@ public class Comment {
     @Column(name = "content")
     private String content;
 
-    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinColumn(name = "review_id")
+    @ManyToOne(targetEntity = Review.class, cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = "")
     private Review review;
 }

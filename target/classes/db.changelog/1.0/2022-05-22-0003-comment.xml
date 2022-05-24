@@ -24,7 +24,7 @@
             </column>
 
             <column name="review_id" type="NUMERIC(19,0)">
-                <constraints nullable="false" foreignKeyName="fk_comment_book" references="review(id)"
+                <constraints nullable="false" foreignKeyName="fk_comment_review" references="review(id)"
                              deleteCascade="true"/>
             </column>
         </createTable>

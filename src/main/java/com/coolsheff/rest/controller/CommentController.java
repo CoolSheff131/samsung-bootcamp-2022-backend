@@ -1,7 +1,9 @@
 package com.coolsheff.rest.controller;
 
+import com.coolsheff.rest.dto.CommentDto;
 import com.coolsheff.rest.dto.ReviewDto;
 import com.coolsheff.rest.dto.TagDto;
+import com.coolsheff.service.CommentService;
 import com.coolsheff.service.ReviewService;
 import com.coolsheff.service.TagService;
 import lombok.RequiredArgsConstructor;
@@ -14,10 +16,10 @@ import java.util.stream.Collectors;
 @RestController
 @RequiredArgsConstructor
 public class CommentController {
-    private final TagService tagService;
+    private final CommentService commentService;
 
     @GetMapping("/comment")
-    public List<TagDto> getAllEntity(){
-        return tagService.getAll().stream().map(TagDto::toDto).collect(Collectors.toList());
+    public List<CommentDto> getAllEntity(){
+        return commentService.getAll().stream().map(CommentDto::toDto).collect(Collectors.toList());
     }
 }

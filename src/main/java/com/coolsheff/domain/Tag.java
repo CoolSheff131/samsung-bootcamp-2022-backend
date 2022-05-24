@@ -6,6 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Data
 @NoArgsConstructor
@@ -20,4 +22,7 @@ public class Tag {
 
     @Column(name = "name")
     private String name;
+
+    @ManyToMany(targetEntity = Review.class, mappedBy = "tags")
+    private Set<Review> reviews = new HashSet<>();
 }

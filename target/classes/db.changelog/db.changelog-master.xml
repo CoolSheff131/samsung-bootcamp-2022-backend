@@ -7,6 +7,10 @@
     <include file="db.changelog/1.0/2022-05-22-0001-tag.xml"/>
     <include file="db.changelog/1.0/2022-05-22-0002-review.xml"/>
     <include file="db.changelog/1.0/2022-05-22-0003-comment.xml"/>
+    <include file="db.changelog/1.0/2022-05-24-0004-review_tag.xml"/>
 
     <include file="db.changelog/data/2022-05-22-0001-tag-data.xml"/>
+    <include file="db.changelog/data/2022-05-24-0002-review-data.xml"/>
+    <include file="db.changelog/data/2022-05-24-0003-comment-data.xml"/>
+    <include file="db.changelog/data/2022-05-24-0004-review_tag-data.xml"/>
 </databaseChangeLog>

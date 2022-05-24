@@ -29,6 +29,10 @@
                 <constraints nullable="false"/>
             </column>
 
+            <column name="UPLOAD_DATE" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+
         </createTable>
     </changeSet>
 </databaseChangeLog>

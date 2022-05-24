@@ -20,6 +20,7 @@ public class ReviewServiceImpl  implements ReviewService{
 
     @Override
     public List<Review> getAll() {
+
         return reviewRepository.findAll();
     }
 

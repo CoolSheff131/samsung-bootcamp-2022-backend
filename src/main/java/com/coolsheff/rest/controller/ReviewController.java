@@ -1,5 +1,6 @@
 package com.coolsheff.rest.controller;
 
+import com.coolsheff.domain.Review;
 import com.coolsheff.rest.dto.ReviewDto;
 import com.coolsheff.service.ReviewService;
 import lombok.RequiredArgsConstructor;
@@ -17,5 +18,13 @@ public class ReviewController {
     @GetMapping("/review")
     public List<ReviewDto> getAllEntity(){
         return reviewService.getAll().stream().map(ReviewDto::toDto).collect(Collectors.toList());
+    }
+
+    @GetMapping("/rev")
+    public ReviewDto getReivew(){
+
+        var a =reviewService.getById(1);
+
+        return ReviewDto.toDto(a);
     }
 }

@@ -6,7 +6,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Data
 @NoArgsConstructor
@@ -28,7 +30,13 @@ public class Review {
     @Column(name = "uploadDate")
     private String uploadDate;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "review")
+    @OneToMany(targetEntity = Comment.class, fetch = FetchType.LAZY,  mappedBy = "review")
     private List<Comment> comments;
+
+    @ManyToMany(targetEntity = Tag.class, fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+    @JoinTable(name = "review_tag",
+                joinColumns = @JoinColumn(name = "review_id"),
+                inverseJoinColumns = @JoinColumn(name = "tag_id"))
+    private Set<Tag> tags = new HashSet<>();
 
 }
