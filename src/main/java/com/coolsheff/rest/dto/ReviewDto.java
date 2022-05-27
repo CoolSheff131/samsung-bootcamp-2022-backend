@@ -2,16 +2,13 @@ package com.coolsheff.rest.dto;
 
 import com.coolsheff.domain.Comment;
 import com.coolsheff.domain.Review;
-import com.coolsheff.domain.Tag;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 import java.util.stream.Collectors;
 
 @Data
@@ -55,7 +52,7 @@ public class ReviewDto {
 //            System.out.println("test4");
 //
 //        }
-        System.out.println("test5");
+//        System.out.println("test5");
         return new ReviewDto(
                 review.getId(),
                 review.getTitle(),
@@ -66,14 +63,14 @@ public class ReviewDto {
         );
     }
 
-    public static Review toDomainObject(ReviewDto entityDto, List<Comment> comments, Set<Tag> tags){
+    public static Review toDomainObject(ReviewDto entityDto, List<Comment> comments){
         return new Review(
                 entityDto.getId(),
                 entityDto.getTitle(),
                 entityDto.getContent(),
                 entityDto.getUploadDate(),
-                comments,
-                tags
+                comments
+                //tags
         );
     }
 }

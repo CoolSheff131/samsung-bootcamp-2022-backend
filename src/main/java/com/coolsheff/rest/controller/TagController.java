@@ -1,5 +1,6 @@
 package com.coolsheff.rest.controller;
 
+import com.coolsheff.domain.Tag;
 import com.coolsheff.rest.dto.ReviewDto;
 import com.coolsheff.rest.dto.TagDto;
 import com.coolsheff.service.ReviewService;
@@ -17,7 +18,7 @@ public class TagController {
     private final TagService tagService;
 
     @GetMapping("/tag")
-    public List<TagDto> getAllEntity(){
-        return tagService.getAll().stream().map(TagDto::toDto).collect(Collectors.toList());
+    public List<Tag> getAllEntity(){
+        return tagService.getAll();
     }
 }

@@ -33,10 +33,11 @@ public class Review {
     @OneToMany(targetEntity = Comment.class, fetch = FetchType.LAZY,  mappedBy = "review")
     private List<Comment> comments;
 
-    @ManyToMany(targetEntity = Tag.class, fetch = FetchType.LAZY,cascade = CascadeType.ALL)
-    @JoinTable(name = "review_tag",
-                joinColumns = @JoinColumn(name = "review_id"),
-                inverseJoinColumns = @JoinColumn(name = "tag_id"))
-    private Set<Tag> tags = new HashSet<>();
+
+//    @ManyToMany(targetEntity = Tag.class, fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+//    @JoinTable(name = "review_tag",
+//                joinColumns = @JoinColumn(name = "review_id"),
+//                inverseJoinColumns = @JoinColumn(name = "tag_id"))
+//    private Set<Tag> tags = new HashSet<>();
 
 }

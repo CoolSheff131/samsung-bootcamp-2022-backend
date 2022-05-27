@@ -17,12 +17,12 @@ public class TagDto {
     private int id;
     private String name;
 
-    public static Tag toDomainObject(TagDto tagDto) {
-        return new Tag(tagDto.getId(), tagDto.getName(),null);
-    }
+//    public static Tag toDomainObject(TagDto tagDto) {
+//        return new Tag(tagDto.getId(), tagDto.getName(),null);
+//    }
 
-    public static TagDto toDto(Tag tag) {
-        System.out.println("AAAAAAAAAAAAAAAAaaa");
-        return new TagDto(tag.getId(), tag.getName());
-    }
+//    public static TagDto toDto(Tag tag) {
+//        System.out.println("AAAAAAAAAAAAAAAAaaa");
+//        return new TagDto(tag.getId(), tag.getName());
+//    }
 }

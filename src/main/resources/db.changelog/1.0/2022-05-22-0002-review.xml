@@ -33,6 +33,11 @@
                 <constraints nullable="false"/>
             </column>
 
+            <column name="studyType_id" type="NUMERIC(19,0)">
+                <constraints nullable="false" foreignKeyName="fk_studyType_review" references="studyType(id)"
+                             deleteCascade="true"/>
+            </column>
+
         </createTable>
     </changeSet>
 </databaseChangeLog>

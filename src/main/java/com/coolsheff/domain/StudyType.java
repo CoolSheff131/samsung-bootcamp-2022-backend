@@ -6,23 +6,19 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.HashSet;
-import java.util.Set;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 @javax.persistence.Entity
-@Table(name="tag")
-public class Tag {
+@Table(name="studyType")
+public class StudyType {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) // Autoincrement
     private int id;
 
-    @Column(name = "name")
-    private String name;
+    @Column(name = "type")
+    private String type;
 
-//    @ManyToMany(targetEntity = Review.class, mappedBy = "tags")
-//    private Set<Review> reviews = new HashSet<>();
 }
